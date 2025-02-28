@@ -1,30 +1,10 @@
-<div class="viewall">
-    <button class="viewallbtn">View All</button>
-    </div>
-    
-    <script>
-    var cardRow = document.querySelector('.row');
-    var viewAllButton = document.querySelector('.viewallbtn');
-    
-    function toggleViewAllButton() {
-          if (cardRow.offsetHeight > 1135) {
-            viewAllButton.style.display = 'block';
-          } else {
-            viewAllButton.style.display = 'none';
-          }
-        }
-    
-        toggleViewAllButton();
-    
-    
-    viewAllButton.addEventListener('click', function () {
-      cardRow.style.maxHeight = 'none';
-      cardRow.style.overflow = 'visible';
-      viewAllButton.style.display = 'none';
-    });
-    
-    window.addEventListener('load', function () {
-      cardRow.style.maxHeight = '1135px'; 
-      cardRow.style.overflow = 'hidden';
-    });
-    </script>
+<div style="display: flex; width: 75%; margin: 0 auto">
+  <div class="sorting-options" style="flex-grow: 1">
+    <select id="sort">
+      <option disabled selected value>Sort by</option>
+      <option value="asc">Alphabetically (A-Z)</option>
+      <option value="desc">Alphabetically (Z-A)</option>
+    </select>
+    <input type="text" id="search" placeholder="Search..." />
+  </div>
+</div>
